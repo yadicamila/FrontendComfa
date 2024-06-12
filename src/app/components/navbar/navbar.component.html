@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recresite</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <img class="logo" width="50" height="35" src="../../../assets/logoComfacauca.png" alt="logo">
+
+            <label class="labe_hamburguesa" for="menu_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a a routerLink="ver-venta" routerLinkActive="" class="link">Ventas</a>
+                </li>
+                <li class="li_links">
+                    <a routerLink="agregar-venta" routerLinkActive="active" class="link">+Venta</a>
+                </li>
+                <li class="li_links">
+                    <a routerLink="agregar-centro" routerLinkActive="active" class="link">Centros</a>
+                </li>
+                <li class="li_links">
+                    <a href="#" class="link">Servicios</a>
+                </li>
+                <li class="li_links">
+                    <div class="perfil-sesion">
+                        <span class="nombre-sesion">{{user.nombre}} {{user.apellido}}</span>
+                        <div class="avatar-inicio">
+                            <i class="fa-solid fa-user  avatar-sesion" style="color: #edeff2;"></i>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+
+</html>

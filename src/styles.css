@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; } */
+/* body {
+  margin: 0;
+  bottom: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+footer{
+  background-color: rgb(36, 43, 43);
+  padding: 1em 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.full-width{
+  width: 100%;
+}
+
+.ml20{
+  margin-left: 20px !important;
+}
+
+.mr20{
+  margin-right: 20px !important;
+}
+
+.mt20{
+  margin-top: 20px !important;
+}
+
+.mt50{
+  margin-top: 50px !important;
+}
+
+.mt60{
+  margin-top: 60px !important;
+}
+
+.mb20{
+  margin-bottom: 20px !important;
+}
+
+.ml10{
+  margin-left: 10px !important;
+}
+
+.mr10{
+  margin-right: 10px !important;
+}
+
+.mt10{
+  margin-top: 10px !important;
+}
+
+.mb10{
+  margin-bottom: 10px !important;
+}
+
+.ml70{
+  margin-left: 70px !important;
+} */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+:root {
+    --color_primario:#077061;
+    --color_primario_suave: #116d8083;
+     --fondo_oscuro:#13161c; 
+    /* --fondo_oscuro:#e7eaef; */
+
+
+    --fondo_claro:#1e2229; 
+    /* --fondo_claro:#d4d8e0; */
+
+    --color_blanco: #fff;
+    --altura_header: 50px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+    --color_verde:#6bb40c;
+    --color_negro:#121212;
+
+    --tamaño_titulo:25px;
+    --tamaño_subtitulo:20px;
+
+
+}
+.titulo-principal {
+    text-align: center;
+    padding-top: 25px;
+    color: var(--color_blanco);
+    font-size: var(--tamaño_titulo);
+}
+.titulo-2 {
+    
+    text-align: center;
+    padding-top: 15px;
+    color: #7f8182;
+    font-size: var(--tamaño_titulo);
+    font-weight: bold;
+}
+.subtitulo{
+    text-align: center;
+    padding-top: 10px;
+    color: #7d7e7f;
+    font-size: var(--tamaño_subtitulo);
+}

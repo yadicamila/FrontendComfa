@@ -1,0 +1,34 @@
+<div class="container">
+    
+    <div class="container text-center" style="margin: 30px">
+        <h3>Centros Recreativos</h3>
+    </div>
+    
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Descripción del Producto</th>
+            <th scope="col">Ubicacion</th>
+            <th scope="col">Existencias</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let centro of centros">
+            <th scope="row">{{centro.idCentro_recreativo}}</th>
+            <td>{{centro.descripcion}}</td>
+            <td>{{centro.ubicacion}}</td>
+            <td>{{centro.existencia}}</td>
+            <td class="text-center">
+              <div>
+                <button (click)="editar(centro.idCentro_recreativo)"
+                class="btn btn-warning btn-sm me-3">Editar</button>
+                <button (click)="eliminar(centro.idCentro_recreativo)"
+                class="btn btn-danger btn-sm">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

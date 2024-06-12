@@ -1,0 +1,17 @@
+<body>
+  <div class="center">
+    <h1 class="titulo-2">Inicio Sesión</h1>
+    <form (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input type="text" class="form-control" id="usuario" [(ngModel)]="usuario" name="usuario" required>
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" class="form-control" id="contrasena" [(ngModel)]="contrasena" name="contrasena" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+      <div *ngIf="error" class="alert alert-danger mt-2">{{ error }}</div>
+    </form>
+  </div>
+</body> 
