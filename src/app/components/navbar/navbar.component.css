@@ -15,6 +15,10 @@ body{
 a{
   text-decoration: none;
 }
+.nombre-app{
+  color: var(--color_blanco);
+  margin-left: 10px;
+}
 ol,ul{
   list-style: none;
   margin-bottom: 0px;

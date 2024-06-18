@@ -11,7 +11,10 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <img class="logo" width="50" height="35" src="../../../assets/logoComfacauca.png" alt="logo">
+            <div class="panel-derecho">
+                <img class="logo" width="50" height="35" src="../../../assets/logoComfacauca.png" alt="logo">
+                <span class="nombre-app">Recresite</span>
+            </div>
 
             <label class="labe_hamburguesa" for="menu_hamburguesa">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
@@ -33,9 +36,9 @@
                 <li class="li_links">
                     <a routerLink="agregar-centro" routerLinkActive="active" class="link">Centros</a>
                 </li>
-                <li class="li_links">
+                <!-- <li class="li_links">
                     <a href="#" class="link">Servicios</a>
-                </li>
+                </li> -->
                 <li class="li_links">
                     <div class="perfil-sesion">
                         <span class="nombre-sesion">{{user.nombre}} {{user.apellido}}</span>

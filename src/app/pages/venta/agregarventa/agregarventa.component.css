@@ -1,3 +1,6 @@
+*{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 .contenedor-venta{
     width: 90%;
     height: 90%;
@@ -118,6 +121,13 @@
 }
 .iconito{
   
+}
+.subtitulo-beneficiarios{
+  color: #757776;
+  font-size: 15px;
+  margin: auto;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .informacion-persona{

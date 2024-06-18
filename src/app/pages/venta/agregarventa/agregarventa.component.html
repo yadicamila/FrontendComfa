@@ -1,56 +1,3 @@
-<!-- <div class="container">
-
-    <div class="container text-center" style="margin: 30px">
-        <h3>Agregar Venta</h3>
-    </div>
-
-    <form (ngSubmit)="onSubmit()">
-        <div class="mb-3">
-          <label for="descripcion" 
-          class="form-label">Cantidad</label>
-          <input type="text" class="form-control" 
-          id="cantidad" name="cantidad" required="true"
-          [(ngModel)]="detalleventa.cantidad">
-        </div>
-        <p>1. Servicios</p>
-                    <div class="row">
-                        <div class="form-group col-6">
-                            <input type="text" (change)="busquedaServicio(filterServicios)" class="form-control" name="filterPost" placeholder="Busqueda..." [(ngModel)]="filterServicios">
-                        </div>
-                    </div>                    
-                    <p></p>
-                    <div class="row">
-                            <mat-form-field class="full-width" appearance="outline">
-                                    <mat-select  placeholder="Servicios..." [(ngModel)]="detalleventa.servicio_id" matInput name="diagnosticos">
-                                        <mat-option *ngFor="let servicios of listadoservicios" (click)="agregarServicio(servicios)">
-                                        {{servicios.nombre}}
-                                        </mat-option>
-                                    </mat-select>                                          
-                            </mat-form-field>
-                        <div>
-                            <mat-list *ngFor="let servicioact of listadoserviciosActuales">
-                                <div class="row">
-                                    <div class="col-11">
-                                        <mat-list-item> Codigo: {{servicioact.nombre}}  {{servicioact.tarifa_plena}}</mat-list-item>
-                                    </div>
-                                    <div class="col-1"><button type="button" (click)="eliminardiagnosticosHistoria(servicioact.id_servicio)" class="btn btn-sm btn-secondary ovalado">
-                                        <i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>                                                          
-                            </mat-list>
-                        </div>
-                        <p></p>
-                        
-                    </div>  
-        <div class="text-center">
-            <button type="submit" 
-                class="btn btn-warning btn-sm me-3">Agregar</button>
-            <a href="/" class="btn btn-danger btn-sm">Regresar</a>    
-        </div>
-      </form>
-
-</div> -->
-
 <body>
 
     <div class="contenedor-venta animate__animated animate__zoomIn">
@@ -58,10 +5,15 @@
         <div class="card-buscar">
             <label for="cedula" class="label-cedula mx-3">Digite la cédula del afiliado:</label>
             <div class="input mx-3">
-                <!-- <label for="name">Cedula</label> -->
+
                 <input class="boton-consultar" type="text" (change)="obtenerAfiliado(filterAfiliados)"
-                    class="form-control" name="filterPost" placeholder="Busqueda..." [(ngModel)]="filterAfiliados">
+                    class="form-control" name="filterPost" placeholder="Cedula..." [(ngModel)]="filterAfiliados">
             </div>
+            <!-- <div class="input mx-3">
+                <input  (change)="obtenerAfiliado(filterAfiliados)" name="filterPost"
+                    [(ngModel)]="filterAfiliados">
+                <label for="name">Cedula</label>
+            </div> -->
             <!-- <div id="consultarAfiliado">
                 <button class="boton-consultar" type="button" onclick="obtenerAfiliado()">Buscar</button>
             </div> -->
@@ -86,7 +38,7 @@
                             </span>
                         </div>
                     </div>
-                    <h3 class="subtitulo">Beneficiarios</h3>
+                    <h4 class="subtitulo-beneficiarios">Beneficiarios</h4>
                     <div class="card-persona" *ngFor="let beneficiariosht of beneficiarios">
                         <div class="icono-persona">
                             <i class="fa-solid fa-user fa-2xl" style="color: #edeff2;"></i>
@@ -102,36 +54,41 @@
             <div class="contenedor-servicios mx-3">
                 <h3 class="subtitulo">Servicios</h3>
                 <div class="servicios">
-                    <mat-card>
-                        <div>
-                            <mat-list *ngFor="let servicios of listadoservicios">
-                                <div class="row">
-                                    <div class="col-11">
-                                        <div class="accordion" id="accordionExample">
-                                            <div class="accordion-item cuadro-acordeon">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">{{servicios.nombre}}
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                                    data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        <div class="menu-personas">
-                                                            <div class="seleccionar-persona">
-                                                                <div class="custom-control custom-checkbox" *ngFor="let afiliados of afiliado">
-                                                                    <input type="checkbox" class="custom-control-input servicio-checkbox"
-                                                                        data-service="Centro Recreativo">
-                                                                    <label class="custom-control-label"> - {{afiliados.nombre}} {{afiliados.apellido}}</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="seleccionar-persona">
-                                                                <div class="custom-control custom-checkbox" *ngFor="let beneficiariosht of beneficiarios">
-                                                                    <input type="checkbox" class="custom-control-input servicio-checkbox"
-                                                                        data-service="Centro Recreativo">
-                                                                    <label class="custom-control-label"> - {{beneficiariosht.nombre}} {{beneficiariosht.apellido}}</label>
-                                                                </div>
-                                                            </div>
+                    <mat-list *ngFor="let servicios of listadoservicios">
+                        <div class="row">
+                            <div class="col-11">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item cuadro-acordeon">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">{{servicios.nombre}}
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="menu-personas">
+                                                    <div class="seleccionar-persona">
+                                                        <div class="custom-control custom-checkbox"
+                                                            *ngFor="let afiliados of afiliado">
+                                                            <input type="checkbox"
+                                                                class="custom-control-input servicio-checkbox"
+                                                                data-service="Centro Recreativo">
+                                                            <label class="custom-control-label mx-3">
+                                                                {{afiliados.nombre}}
+                                                                {{afiliados.apellido}}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seleccionar-persona">
+                                                        <div class="custom-control custom-checkbox"
+                                                            *ngFor="let beneficiariosht of beneficiarios">
+                                                            <input type="checkbox"
+                                                                class="custom-control-input servicio-checkbox"
+                                                                data-service="Centro Recreativo">
+                                                            <label class="custom-control-label mx-3 ">
+                                                                {{beneficiariosht.nombre}}
+                                                                {{beneficiariosht.apellido}}</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -139,10 +96,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </mat-list>
-
+                            </div>
                         </div>
-                    </mat-card>
+                    </mat-list>
 
                 </div>
             </div>
